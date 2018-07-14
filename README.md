@@ -1,9 +1,10 @@
 # AnnihilationRP
 Annihilation ゲームの Map 名を Discord Rich Presence に表示する物
 
-今後 Team なども表示対応させていく予定
-
 バージョン: Minecraft 1.7.10, 1.9.4
+
+# Screenshot
+![screenshot-1](https://i.gyazo.com/449c5cc56eb0d3ec411da4f9fc61afd6.png "screenshot-1")
 
 # Open Source License
 **・DiscordIPC | Apache License 2.0**
