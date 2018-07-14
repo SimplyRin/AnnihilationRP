@@ -3,6 +3,8 @@ Annihilation ゲームの Map 名を Discord Rich Presence に表示する物
 
 今後 Team なども表示対応させていく予定
 
+バージョン: Minecraft 1.7.10, 1.9.4
+
 # Open Source License
 **・DiscordIPC**
 ```
