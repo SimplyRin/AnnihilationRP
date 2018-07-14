@@ -85,7 +85,7 @@ public class Main {
 	}
 
 	@SubscribeEvent
-    public void onLoin(FMLNetworkEvent.ClientDisconnectionFromServerEvent event) {
+	public void onDisconnect(FMLNetworkEvent.ClientDisconnectionFromServerEvent event) {
 		this.isShotbow = false;
 		this.disconnect();
 	}
