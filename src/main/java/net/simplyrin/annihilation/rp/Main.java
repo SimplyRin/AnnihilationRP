@@ -43,7 +43,10 @@ public class Main {
 	private Minecraft mc;
 
 	private boolean isShotbow;
-	private String currentMap;
+	private boolean teamDetectMode = false;
+
+	private String currentMap = "Unknown";
+	private String currentTeam = "Unknown";
 
 	private IPCClient ipcClient;
 
@@ -65,6 +68,34 @@ public class Main {
 		}
 
 		if(!this.isShotbow) {
+			return;
+		}
+
+		if(message.contains("You have joined the")) {
+			this.teamDetectMode = true;
+			return;
+		}
+
+		if(this.teamDetectMode) {
+			this.teamDetectMode = false;
+
+			if(message.contains("Red team")) {
+				this.currentTeam = "Red";
+			}
+
+			if(message.contains("Yellow team")) {
+				this.currentTeam = "Yellow";
+			}
+
+			if(message.contains("Green team")) {
+				this.currentTeam = "Green";
+			}
+
+			if(message.contains("Blue team")) {
+				this.currentTeam = "Blue";
+			}
+			this.disconnect();
+			this.connect();
 			return;
 		}
 
@@ -105,6 +136,7 @@ public class Main {
 		} else {
 			presence.setDetails("Lobby");
 		}
+		presence.setState("Team: " + this.currentTeam);
 		presence.setStartTimestamp(OffsetDateTime.now());
 		presence.setLargeImage("shotbow", "play.shotbow.net");
 		this.ipcClient.sendRichPresence(presence.build());
