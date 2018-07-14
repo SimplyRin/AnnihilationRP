@@ -12,12 +12,12 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.FMLNetworkEvent;
+import net.md_5.bungee.api.ChatColor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.scoreboard.ScoreObjective;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import net.minecraftforge.common.MinecraftForge;
-import net.simplyrin.annihilation.rp.utils.ChatColor;
 
 /**
  * Created by SimplyRin on 2018/07/14.
@@ -94,6 +94,7 @@ public class Main {
 			if(message.contains("Blue team")) {
 				this.currentTeam = "Blue";
 			}
+
 			this.disconnect();
 			this.connect();
 			return;

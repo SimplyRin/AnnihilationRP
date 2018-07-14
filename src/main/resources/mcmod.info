@@ -1,0 +1,16 @@
+[
+{
+  "modid": "AnnihilationRP",
+  "name": "AnnihilationRP",
+  "description": "Discord Rich Presence Mod for Annihilation",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SimplyRin"],
+  "credits": "Discord Rich Presence Mod for Annihilation",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
