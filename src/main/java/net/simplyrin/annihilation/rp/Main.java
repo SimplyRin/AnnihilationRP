@@ -43,7 +43,7 @@ public class Main {
 	private Minecraft mc;
 
 	private boolean isShotbow;
-	private boolean teamDetectMode = false;
+	private boolean isTeamDetectMode = false;
 
 	private String currentMap = "Unknown";
 	private String currentTeam = "Unknown";
@@ -72,12 +72,12 @@ public class Main {
 		}
 
 		if(message.contains("You have joined the")) {
-			this.teamDetectMode = true;
+			this.isTeamDetectMode = true;
 			return;
 		}
 
-		if(this.teamDetectMode) {
-			this.teamDetectMode = false;
+		if(this.isTeamDetectMode) {
+			this.isTeamDetectMode = false;
 
 			if(message.contains("Red team")) {
 				this.currentTeam = "Red";
