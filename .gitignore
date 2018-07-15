@@ -25,7 +25,12 @@ hs_err_pid*
 .classpath
 .project
 .settings/
+.idea/
+*.launch
+build/
 target/
+out/
+run/
 eclipse/
 bin/
 gradle/
