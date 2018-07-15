@@ -45,7 +45,7 @@ public class Main {
 	private boolean isShotbow;
 	private boolean isTeamDetectMode = false;
 
-	private String currentMap = "Unknown";
+	private String currentMap;
 	private String currentTeam = "Unknown";
 
 	private IPCClient ipcClient;
@@ -148,6 +148,9 @@ public class Main {
 			this.ipcClient.close();
 			this.ipcClient = null;
 		}
+	}
+
+	public void detectTeam() {
 	}
 
 	public String toUpperCase(String message) {
